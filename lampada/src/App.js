@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
 import Lampada from './components/Lampada'
 import { useState } from 'react';
 
 function App() {
 
-  const [light, setLight] = useState(false)
+  const [light, setLight] = useState(false);
+  const [energy, setEnergy] = useState(false);
 
   let fillColor = light ? 'tomato' : 'gray';
+  let fillBtn = energy ? 'ON' : 'OFF';
+  
 
-  const handleLight = () => setLight(!light);
+
+  const handleLight = () => {
+      setLight(!light);
+      setEnergy(!energy);
+     
+  }
 
   return (
-
     <div className="app">
-        <h1>La lampada</h1>
+        <h1>A minha lampada</h1>
         <section>
           <Lampada fillColor={fillColor}/>
         </section>
-        <button onClick={handleLight}>ON / OFF</button>
+        <br />
+        <button onClick={handleLight}>{fillBtn}</button>
     </div>
   );
 }
