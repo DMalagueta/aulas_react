@@ -1,0 +1,9 @@
+.App{
+  text-align: center;
+}
+
+.windowResize{
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+}
