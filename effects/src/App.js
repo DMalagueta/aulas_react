@@ -1,5 +1,6 @@
 import './App.css';
 import SayHello from './components/SayHello';
+import UsersList from './components/UsersList';
 import UsingLocalStorage from './components/UsingLocalStorage';
 import WindowResizer from './components/WindowResizer';
 
@@ -13,6 +14,8 @@ function App() {
           <WindowResizer/>
           <hr />
           <UsingLocalStorage/>
+          <hr />
+          <UsersList />
       </header>
     </div>
   );
